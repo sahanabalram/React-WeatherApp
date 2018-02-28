@@ -17,7 +17,8 @@ class App extends Component {
     return(
       <div>
       <Titles/>
-      <Form/>
+      {/* A prop called getWeather is used to get all the information from getWeather function Access for getWeather function is now availabe on the Form component as well.*/}
+      <Form getWeather={this.getWeather}/>
       <Weather/>
       </div>
     );
