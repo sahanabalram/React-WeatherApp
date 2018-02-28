@@ -25,6 +25,15 @@ class App extends Component {
     // convert the data that is received from the apicall to a json object
     const data = await apiCall.json();
     console.log(data);
+    // update the value of temperature once the button(Get Weather) is clicked.
+    this.setState({
+      temperature:data.main.temp,
+      city:data.name,
+      country: data.sys.country,
+      humidity: data.main.humidity,
+      description: data.weather[0].description,
+      error: ''
+    });
   }
   render() {
     return(
