@@ -46,7 +46,7 @@ class App extends Component {
         country: undefined,
         humidity: undefined,
         description: undefined,
-        error: ""
+        error: "Please enter the values"
       });
     }
 
