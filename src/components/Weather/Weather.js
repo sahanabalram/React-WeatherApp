@@ -8,7 +8,7 @@ class Weather extends Component {
             {/*if the city and country return true only then display the location paragraph once the the Get Weather button is clicked ( both the condition must be true)*/}
                 {
                     this.props.city && this.props.country && <p className="weather__key">Location: 
-                    <span className="weather__value">{this.props.city}, {this.props.country}</span>
+                    <span className="weather__value"> {this.props.city}, {this.props.country}</span>
                     </p>
                 }
                 
@@ -20,17 +20,17 @@ class Weather extends Component {
              
                 {
                     this.props.humidity && <p className="weather__key">Humidity:
-                    <span className="weather__value">{this.props.humidity}</span>
+                    <span className="weather__value"> {this.props.humidity}</span>
                     </p>
                 }
                  
                 {
                     this.props.description && <p className="weather__key">Conditions:
-                    <span className="weather__value">{this.props.description}</span>
+                    <span className="weather__value"> {this.props.description}</span>
                     </p>
                 }
                 {
-                    this.props.error && <p>{this.props.error}</p> 
+                    this.props.error && <p> {this.props.error}</p> 
                 }
             </div>
         );
