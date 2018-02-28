@@ -13,6 +13,7 @@ class Weather extends Component {
                 {this.props.humidity && <p>Humidity:{this.props.humidity}</p>}
                  {/*if the conditions return true only then display the conditions once the Get Weather button is clicked (the condition must be true)*/}
                 {this.props.description && <p>Conditions:{this.props.description}</p>}
+                {this.props.error && <p>{this.props.error}</p>}
             </div>
         );
     }
