@@ -28,7 +28,7 @@ class App extends Component {
     const apiCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}&unites=metric`);
     // convert the data that is received from the apicall to a json object
     const data = await apiCall.json();
-    if (city === true && country === true) {
+    if (city && country) {
       console.log(data);
       // update the value of temperature once the button(Get Weather) is clicked.
       this.setState({
