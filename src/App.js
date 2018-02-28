@@ -6,16 +6,19 @@ import Weather from './components/Weather';
 const apiKey = "adbf7a5641d4e0a71b928d138a4b6bed";
 
 class App extends Component {
-  // defining the initial state
-  state ={
+  constructor(props) {
+    super(props);
+    // defining the initial state
+    this.state = {
     temperature: undefined,
     city: undefined,
     country: undefined,
     humidity: undefined,
     description: undefined,
     error: undefined
+    }
   }
-  getWeather =  async function(e) {
+  getWeather =  async (e) => {
     // signifies single page application
     e.preventDefault();
     const city = e.target.elements.city.value;
